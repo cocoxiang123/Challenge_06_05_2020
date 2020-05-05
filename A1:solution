@@ -1,0 +1,16 @@
+/**
+ * @param {string[][]} paths
+ * @return {string}
+ */
+var destCity = function(paths) {
+   let sources = [];
+  let destinations = [];
+  
+  paths.forEach((path) => {
+    sources.push(path[0]);
+    destinations.push(path[1]);
+  });
+  
+  let destinationCity = destinations.filter(destination => !sources.includes(destination))[0];
+    return destinationCity
+};
